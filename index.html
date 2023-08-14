@@ -27,7 +27,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
               ><span class="logo-web">WEB</span>STUDIO</a
             >
             <menu class="menu-links">
-              <li><a href="./index.html" class="links-style">Studio</a></li>
+              <li><a href="./index.html" class="links-style tab-active">Studio</a></li>
               <li>
                 <a href="./portfolio.html" class="links-style">Portfolio</a>
               </li>
@@ -57,8 +57,17 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
             Effective Solutions <br />
             for Your Business
           </h1>
-          <button class="order-service" type="button">Order service</button>
+          <button class="order-service" type="button" data-modal-open>Order service</button>
         </div>
+        <div class="modal is-hidden" data-modal>
+      <div class="modal-box">
+        <button type="button" class="close-button" data-modal-close>
+          <svg class="modal-close-icon" width="12px" height="12px">
+            <use href="./images/icons.svg#icon-close-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
       </section>
 
       <section class="section-main-pillars section-main-pillars">
@@ -301,5 +310,6 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
         </div>
       </div>
     </footer>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
