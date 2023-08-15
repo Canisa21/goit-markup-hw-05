@@ -14,6 +14,8 @@ body {
     --color-text: rgba(67, 68, 85, 1);
     --color-h1: rgba(255, 255, 255, 1);
     --color-footer: rgba(244, 244, 253, 1);
+    --color-overlay-text: rgba(244, 244, 253, 1);
+    --background-color-overlay : rgba(77, 90, 229, 1);
     --transition-time: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -218,12 +220,12 @@ body {
 .close-button {
     position: absolute;
     top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    background-color: #e7e9fc;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        background-color: #e7e9fc;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
 }
 
 .is-hidden {
@@ -443,7 +445,34 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     padding-right: 16px;
 
  }
- 
+ .project-box {
+    position: relative;
+        width: 360px;
+        height: 300x;
+        margin: 0 auto;
+        background-color: #bdbdbd;
+        overflow: hidden;
+ }
+ .overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: var(--background-color-overlay);
+padding: 40px 32px 164px;
+     transform: translatey(100%);
+     transition: transform 250ms ease-in-out;
+ }
+ .project-box:hover .overlay {
+     transform: translatey(0);}
+
+.overlay-text {
+    color:var(--color-overlay-text);
+    line-height: 1.5;
+        letter-spacing: 0.32px;
+}
+
  .project-title { 
         font-size: 20px;
         font-weight: 500;
